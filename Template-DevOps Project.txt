@@ -1,11 +1,11 @@
 {
  "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Description" : "AWS CloudFormation  Windows stack  (web application on IIS). This stack should have an Auto scaling group and elastic load balancer , it ASG should spread across 2 AZ’s",
+  "Description" : "AWS CloudFormation Linux stack and Configure Apache Web Server. This stack should have an Auto scaling group and elastic load balancer , it ASG should spread across 2 AZâ€™s",
 
   "Parameters" : {
     "InstanceType" : {
-      "Description" : "WindowsIIS EC2 instance type",
+      "Description" : "Linux EC2 instance type",
       "Type" : "String",
       "Default" : "t2.micro",
       "AllowedValues" : [ "t1.micro", "t2.micro", "t2.small", "t2.medium"],
@@ -37,17 +37,7 @@
         "Description" : "Name of IAM Profile that will be used by instances to access AWS Services",
         "Type"        : "String",
         "Default"     : "jeenelsa@yahoo.com"
-    },
-    "DeployS3Bucket"     : {
-      "Description" : "The S3 Bucket where deploy files are stored",
-      "Type"        : "String",
-      "Default"     : "ApplicationBucket"
-      },
-    "Powershellfile"     : {
-      "Description" : "The file that holds the Power shell script",
-      "Type"        : "String",
-      "Default"     : "FILE"
-     }
+    }    
     },
 
   "Mappings" : {

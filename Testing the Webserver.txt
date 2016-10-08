@@ -1,0 +1,5 @@
+We can test that our web server(Apache Tomcat) is properly installed and started by entering the public DNS name of our EC2 instance in the address bar of a web browser, 
+
+for example: http://ec2-42-8-168-21.us-west-1.compute.amazonaws.com. If the web server is running, then we can see the Apache test page.
+
+Since I have added content to the document root directory (/var/www/html), "Hello 'World" appears at the public DNS address of the EC2 instance instead of the Apache test page.

@@ -49,7 +49,7 @@
     },
 
     "AWSRegionArch2AMI" : {
-     "us-east-1"      : { "HVM64" : "ami-9a0558f0", "HVM32" : "ami-1e3e6374"  },
+     "us-east-1"      : { "HVM64" : "ami-c481fad3", "HVM32" : "ami-1e3e6374"  },
      "us-west-2"      : { "HVM64" : "ami-83a5bce2", "HVM32" : "ami-dca9b0bd"  },
      "us-west-1"      : { "HVM64" : "ami-e7e78d87", "HVM32" : "ami-ffe3899f"  },
      "eu-west-1"      : { "HVM64" : "ami-7943ec0a", "HVM32" : "ami-0e43ec7d"  },
@@ -91,7 +91,7 @@
     "LaunchConfig" : {
       "Type" : "AWS::AutoScaling::LaunchConfiguration",
       "Metadata" : {
-        "Comment" : "Install a simple application",
+        "Comment" : "Install Apache web server application",
         "AWS::CloudFormation::Init" : {
         "config" : {
             "packages" : {
@@ -210,12 +210,6 @@
           "IpProtocol" : "tcp",
           "FromPort" : "22",
           "ToPort" : "22",
-          "CidrIp" : { "Ref" : "SSHLocation"}
-        },
-        {
-          "IpProtocol" : "tcp",
-          "FromPort" : "3389",
-          "ToPort" : "3389",
           "CidrIp" : { "Ref" : "SSHLocation"}
         },
         {
